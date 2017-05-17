@@ -3,11 +3,69 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Hello</title>
-	<link rel="stylesheet" href="">
+	<title>Picture</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
 </head>
+
+<!-- The JavaScript -->
+<script type="text/javascript" src="js/jquery-latest.js"></script> 
+<script type="text/javascript">
+$(document).ready(function(){
+//Larger thumbnail preview 
+$("ul.thumb li").hover(function() {
+$(this).css({'z-index' : '10'});
+$(this).find('img').addClass("hover").stop()
+.animate({
+	marginTop: '-110px', 
+	marginLeft: '-110px', 
+	top: '50%', 
+	left: '50%', 
+	width: '250px', 
+	height: '250px',
+	padding: '10px' 
+}, 200);
+} , function() {
+$(this).css({'z-index' : '0'});
+$(this).find('img').removeClass("hover").stop()
+.animate({
+	marginTop: '0', 
+	marginLeft: '0',
+	top: '0', 
+	left: '0', 
+	width: '200px', 
+	height: '200px', 
+	padding: '5px'
+}, 400);
+});
+//Swap Image on Click
+$("ul.thumb li a").click(function() {
+var mainImage = $(this).attr("href"); //Find Image Name
+$("#main_view img").attr({ src: mainImage });
+return false;		
+});
+});
+</script>
+
 <body>
-<h1>Hello World</h1>
-	
+    <div id="col">
+        <ul class="thumb">
+            <li><img src="images/t1.jpg" title="航空母舰" alt="" /></li>
+            <li><img src="images/t2.jpg" title="洲际导弹" alt="" /></li>
+            <li><img src="images/t3.jpg" title="超音速飞机" alt="" /></li>
+            <li><img src="images/t4.jpg" title="航母战斗群" alt="" /></li>
+            <li><img src="images/t5.jpg" title="现代化都市" alt="" /></li>
+            <li><img src="images/t6.jpg" title="高铁" alt="" /></li>
+            <li><img src="images/t7.jpg" title="机器人" alt="" /></li>
+            <li><img src="images/t8.jpg" title="飞船" alt="" /></li>
+            <li><img src="images/t9.jpg" title="未来科技人类" alt="" /></li>
+            <li><img src="images/t10.jpg" title="海洋科技" alt="" /></li>
+            <li><img src="images/h2.jpg" title="量子力学" alt="" /></li>
+            <li><img src="images/h3.jpg" title="航天运载火箭" alt="" /></li>
+            <li><img src="images/h4.jpg" title="航天器" alt="" /></li>
+            <li><img src="images/h5.jpg" title="人造卫星" alt="" /></li>
+            <li><img src="images/h6.jpg" title="全息激光投影" alt="" /></li>
+        </ul>
+    </div>
+    
 </body>
 </html>

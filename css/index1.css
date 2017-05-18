@@ -3,7 +3,7 @@ Theme Name: Airos Chou
 Theme URI: http://www.sunflowamedia.com
 Description: Web Design examples
 */
-*{
+{
 	margin: 0;
 	padding: 0;
 }
@@ -12,6 +12,7 @@ body{
 	font-family: "Myriad Pro", "Trebuchet MS", Helvetica, sans-serif;
 	font-size: 12px;
 	color: #fff;
+	overflow: hidden;
 }
 h2.title_name {
 	font-family: normal Georgia,'Times New Roman',Times,serif;
@@ -41,7 +42,6 @@ p.copy_right {
 	font-size: 1.1em;
 	letter-spacing: 1px;
 	text-align: center;
-	overflow: hidden;
 }
 p.copy_right a {
 	color: #1D68AF;
@@ -50,51 +50,8 @@ p.copy_right a:hover {
 	text-decoration: none;
 }
 /* Content Begin */
-#col1 {
-	width: 1140px;
-	margin: 20px auto 0 auto;
-	clear: both;
-	padding-bottom: 50px;
-}
-ul.thumb {
-	list-style: none;
-	margin: 0 auto; 
-	padding: 10px;
-}
-ul.thumb li {
-	margin: 0; 
-	padding: 5px;
-	float: left;
-	position: relative;  /* Set the absolute positioning base coordinate */
-	width: 210px;
-	height: 210px;
-}
-ul.thumb li img {
-	width: 200px; height: 200px; /* Set the small thumbnail size */
-	-ms-interpolation-mode: bicubic; /* IE Fix for Bicubic Scaling */
-	border: 1px solid #ddd;
-	padding: 5px;
-	background: #f0f0f0;
-	position: absolute;
-	left: 0; 
-	top: 0;
-}
-ul.thumb li img.hover {
-	background: #444;  /* Image used as background on hover effect
-	border: none; /* Get rid of border on hover */
-}
-#main_view {
-	width: 750px;
-	margin: 0 auto;
-	padding-top: 20px;
-	text-align: center;
-	clear: both;
-}
-
-
-
 #col2 {
-	width: 1000px;
+	width: 600px;
 	margin: 20px auto 0px auto;
     border: 10px solid #2D353F;
 	overflow: hidden;

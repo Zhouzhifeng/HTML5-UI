@@ -5,10 +5,12 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Picture</title>
 	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	
 </head>
 
 <!-- The JavaScript -->
 <script type="text/javascript" src="js/jquery-latest.js"></script> 
+<script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
 //Larger thumbnail preview 
@@ -16,13 +18,13 @@ $("ul.thumb li").hover(function() {
 $(this).css({'z-index' : '10'});
 $(this).find('img').addClass("hover").stop()
 .animate({
-	marginTop: '-110px', 
+	marginTop: '-110px',
 	marginLeft: '-110px', 
-	top: '50%', 
-	left: '50%', 
-	width: '250px', 
+	top: '50%',
+	left: '50%',
+	width: '250px',
 	height: '250px',
-	padding: '10px' 
+	padding: '10px'
 }, 200);
 } , function() {
 $(this).css({'z-index' : '0'});
@@ -44,10 +46,23 @@ $("#main_view img").attr({ src: mainImage });
 return false;		
 });
 });
+
+$(function() {
+        $('#col2 img').hover(
+            function(){
+                var $this = $(this);
+                $this.stop().animate({'opacity':'1.0','height':'200px','top':'0px','left':'0px'});
+            },
+            function(){
+                var $this = $(this);
+                $this.stop().animate({'opacity':'0.5','height':'500px','top':'-66.5px','left':'-150px'});
+            }
+        );
+    });
 </script>
 
 <body>
-    <div id="col">
+    <div id="col1">
         <ul class="thumb">
             <li><img src="images/t1.jpg" title="航空母舰" alt="" /></li>
             <li><img src="images/t2.jpg" title="洲际导弹" alt="" /></li>
@@ -66,6 +81,60 @@ return false;
             <li><img src="images/h6.jpg" title="全息激光投影" alt="" /></li>
         </ul>
     </div>
-    
+    <br><br><br><br><br><br><br>
+
+	<div id="col2">
+        <div class="pic">
+            <a href="video/地球有多大.mp4" target="_blank">
+                <img src="images/1.jpg" title="地球有多大" alt="veerles-blog"/>
+            </a>
+        </div>
+        <div class="pic">
+            <a href="video/猛禽战斗机自由落体.mp4" target="_blank">
+                <img src="images/2.jpg" title="猛禽战斗机自由落体" alt="veerles-blog"/>
+            </a>
+        </div>
+        <div class="pic">
+            <a href="video/制造的原理.mp4" target="_blank">
+                <img src="images/3.jpg" title="制造的原理" alt="veerles-blog"/>
+            </a>
+        </div>
+        <div class="pic">
+            <a href="video/量子力学.mp4" target="_blank">
+                <img src="images/4.jpg" title="量子力学" alt="veerles-blog"/>
+            </a>
+        </div>
+        <div class="pic">
+            <a href="video/行星勘测人造卫星.mp4" target="_blank">
+                <img src="images/5.jpg" title="行星勘测人造卫星" alt="relove"/>
+            </a>
+        </div>
+        <div class="pic">
+            <a href="video/能量护盾技术.mp4" target="_blank">
+                <img src="images/6.jpg" title="能量护盾技术" alt="flowergirl"/>
+            </a>
+        </div>
+        <div class="pic">
+            <a href="video/机器人技术.mp4" target="_blank">
+                <img src="images/7.jpg" title="机器人技术" alt="flowergirl"/>
+            </a>
+        </div>
+        <div class="pic">
+            <a href="video/苏联航母战斗群简介.mp4" target="_blank">
+                <img src="images/8.jpg" title="苏联航母战斗群简介" alt="flowergirl"/>
+            </a>
+        </div>
+        <div class="pic">
+            <a href="video/海洋能源——潮流涡轮机.mp4" target="_blank">
+                <img src="images/9.jpg" title="海洋能源——潮流涡轮机" alt="flowergirl"/>
+            </a>
+        </div>
+        <div class="pic">
+            <a href="video/美国“超级高铁”首测成功.mp4" target="_blank">
+                <img src="images/10.jpg" title=" 美国“超级高铁”首测成功" alt="flowergirl"/>
+            </a>
+        </div>
+    </div>
+
 </body>
 </html>
